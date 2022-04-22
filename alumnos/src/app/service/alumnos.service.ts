@@ -7,9 +7,9 @@ import { Alumno } from '../model/Alumno';
 })
 export class AlumnosService {
 
-  url:string = "http://localhost:8080/07_alumnos_bbdd/Buscador";
+  url:string = "http://localhost:8080/09_alumnos_persistencia/Buscador";
 
-  url2:string = "http://localhost:8080/07_alumnos_bbdd/Cursos";
+  url2:string = "http://localhost:8080/09_alumnos_persistencia/Cursos";
 
   constructor(private http:HttpClient) { }
 

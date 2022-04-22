@@ -8,7 +8,7 @@ import { Producto } from '../model/Producto';
 })
 export class ProductosService {
 
-  url:string = "http://localhost:8080/06_tienda_bbdd_AJAX/Buscador";
+  url:string = "http://localhost:8080/08_tienda_persistencia/Buscador";
 
   constructor(private http:HttpClient) { }
 
