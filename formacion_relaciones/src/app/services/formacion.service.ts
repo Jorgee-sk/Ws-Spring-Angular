@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Alumno } from '../model/Alumno';
 import { Curso } from '../model/Curso';
 
@@ -8,11 +8,12 @@ import { Curso } from '../model/Curso';
 })
 export class FormacionService {
 
-  url:string = "http://localhost:8080/11_formacion_relac/cursosAlumno";
-  url2:string = "http://localhost:8080/11_formacion_relac/Cursos";
-  url3:string = "http://localhost:8080/11_formacion_relac/alumnosCurso";
-  url4:string = "http://localhost:8080/11_formacion_relac/Alumnos";
-
+  url:string = "http://localhost:8080/15_formacion_matriculas/cursosAlumno";
+  url2:string = "http://localhost:8080/15_formacion_matriculas/Cursos";
+  url3:string = "http://localhost:8080/15_formacion_matriculas/alumnosCurso";
+  url4:string = "http://localhost:8080/15_formacion_matriculas/Alumnos";
+  url5:string = "http://localhost:8080/15_formacion_matriculas/altaAlumno";
+  url6:string = "http://localhost:8080/15_formacion_matriculas/altaCurso";
   constructor(private http:HttpClient) { }
 
   getCursosAlumno(usuario:string){
@@ -36,5 +37,26 @@ export class FormacionService {
     return this.http.get<Alumno[]>(this.url4)
   }
 
+  altaAlumnos(alumno:Alumno){
+
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type','application/json; charset=utf-8');
+    headers = headers.set('Access-Control-Allow-Origin','*');
+
+    let json = {alumno:Alumno};
+    return this.http.post<Alumno[]>(this.url5,json,{headers:headers});
+  
+  }
+
+  altaCursos(curso:Curso){
+
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type','application/json; charset=utf-8');
+    headers = headers.set('Access-Control-Allow-Origin','*');
+
+    let json = {curso:Curso};
+    return this.http.post<Curso[]>(this.url5,json,{headers:headers});
+  
+  }
   
 }

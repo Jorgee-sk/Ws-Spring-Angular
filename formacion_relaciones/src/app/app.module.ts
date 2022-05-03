@@ -6,17 +6,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
-import { EnlacesAppComponent } from './componentes/enlaces-app/enlaces-app.component';
 import { AlumnosCursoComponent } from './componentes/alumnos-curso/alumnos-curso.component';
 import { CursoAlumnosComponent } from './componentes/curso-alumnos/curso-alumnos.component';
+import { AltaAlumnoComponent } from './componentes/alta-alumno/alta-alumno.component';
+import { AltaCursoComponent } from './componentes/alta-curso/alta-curso.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabeceraComponent,
-    EnlacesAppComponent,
     AlumnosCursoComponent,
-    CursoAlumnosComponent
+    CursoAlumnosComponent,
+    AltaAlumnoComponent,
+    AltaCursoComponent
   ],
   imports: [
     BrowserModule,

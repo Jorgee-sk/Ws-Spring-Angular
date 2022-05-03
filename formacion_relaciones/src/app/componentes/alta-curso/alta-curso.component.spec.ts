@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EnlacesAppComponent } from './enlaces-app.component';
+import { AltaCursoComponent } from './alta-curso.component';
 
-describe('EnlacesAppComponent', () => {
-  let component: EnlacesAppComponent;
-  let fixture: ComponentFixture<EnlacesAppComponent>;
+describe('AltaCursoComponent', () => {
+  let component: AltaCursoComponent;
+  let fixture: ComponentFixture<AltaCursoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EnlacesAppComponent ]
+      declarations: [ AltaCursoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EnlacesAppComponent);
+    fixture = TestBed.createComponent(AltaCursoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
