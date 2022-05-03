@@ -8,8 +8,9 @@ import { AppComponent } from './app.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { AlumnosCursoComponent } from './componentes/alumnos-curso/alumnos-curso.component';
 import { CursoAlumnosComponent } from './componentes/curso-alumnos/curso-alumnos.component';
-import { AltaAlumnoComponent } from './componentes/alta-alumno/alta-alumno.component';
-import { AltaCursoComponent } from './componentes/alta-curso/alta-curso.component';
+import { ConsultarMatriculasComponent } from './componentes/consultar-matriculas/consultar-matriculas.component';
+
+
 
 @NgModule({
   declarations: [
@@ -17,8 +18,8 @@ import { AltaCursoComponent } from './componentes/alta-curso/alta-curso.componen
     CabeceraComponent,
     AlumnosCursoComponent,
     CursoAlumnosComponent,
-    AltaAlumnoComponent,
-    AltaCursoComponent
+    ConsultarMatriculasComponent,
+    
   ],
   imports: [
     BrowserModule,

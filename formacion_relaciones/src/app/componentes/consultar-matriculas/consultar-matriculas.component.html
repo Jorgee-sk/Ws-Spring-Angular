@@ -1,0 +1,26 @@
+<fieldset>
+    <legend>Matriculas</legend>
+    <input type="date"  [(ngModel)]="dateIni" />
+
+    <input type="date"  [(ngModel)]="dateFin" />
+
+    <input type="button" value="Buscar" (click)="consultarMatriculas()" />
+
+
+  <table *ngIf="matriculas?.length" border="1">
+    <thead>
+      <tr>
+        <th>Curso</th>
+        <th>Fecha Inicio</th>
+        <th>Usuario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="m of matriculas">
+        <td>{{ m.cursoDto.nombre}}</td>
+        <td>{{ m.cursoDto.fecha}}</td>
+        <td>{{ m.alumnoDto.nombre }}</td>
+      </tr>
+    </tbody>
+  </table>
+</fieldset>
