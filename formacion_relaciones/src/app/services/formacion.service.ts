@@ -40,7 +40,7 @@ export class FormacionService {
 
   buscarMatriculas(dateIni:string,dateFin:string){
 
-    return this.http.get<Matricula[]>(this.url5,{params:{"fechaIni":dateIni, "fechaFin":dateFin},});
+    return this.http.get<Matricula[]>(this.url5,{params:{fechaIni:dateIni, fechaFin:dateFin}});
 
   }
 

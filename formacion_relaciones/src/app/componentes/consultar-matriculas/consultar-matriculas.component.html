@@ -7,7 +7,7 @@
     <input type="button" value="Buscar" (click)="consultarMatriculas()" />
 
 
-  <table *ngIf="matriculas?.length" border="1">
+  <table border="1" *ngIf="matriculas?.length">
     <thead>
       <tr>
         <th>Curso</th>
@@ -16,10 +16,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="m of matriculas">
-        <td>{{ m.cursoDto.nombre}}</td>
-        <td>{{ m.cursoDto.fecha}}</td>
-        <td>{{ m.alumnoDto.nombre }}</td>
+      <tr *ngFor="let m of matriculas">
+        <td>{{ m.curso.nombre}}</td>
+        <td>{{ toDate(m.curso.fechaInicio)}}</td>
+        <td>{{ m.alumno.nombre }}</td>
       </tr>
     </tbody>
   </table>

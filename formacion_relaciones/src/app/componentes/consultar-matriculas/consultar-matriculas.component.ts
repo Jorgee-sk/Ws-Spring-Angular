@@ -13,21 +13,27 @@ import { FormacionService } from 'src/app/services/formacion.service';
 export class ConsultarMatriculasComponent  {
 
   matriculas: Matricula[]=[];
-  m:Matricula = new Matricula();
   dateIni: string = '';
   dateFin: string = '';
 
   constructor(private service: FormacionService, private router: Router) {}
- 
-  routeindex() {
-    this.router.navigate(['']);
+  
+  ngOnInit(){
+
+  }
+
+  public routingProgramatico(){
+    this.router.navigate(['/consultarMatriculas']);
   }
 
   consultarMatriculas() {
-    this.service
-      .buscarMatriculas(this.dateIni, this.dateFin)
-      .subscribe((data) => (this.matriculas = data));
+    this.service.buscarMatriculas(this.dateIni, this.dateFin).subscribe((data) => (this.matriculas = data));
 
+  }
+
+  toDate(timestamp: Date){
+    let date: Date = new Date(Number(timestamp));  
+    return date.getDate()+"-"+(date.getMonth()+1)+"-"+date.getFullYear();
   }
   
 }
